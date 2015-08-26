@@ -10,6 +10,10 @@
 		EF6087C91B8CDBA800BBD43C /* SwiftlyBridgedCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = EF6087C81B8CDBA800BBD43C /* SwiftlyBridgedCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF6087D01B8CDBA800BBD43C /* SwiftlyBridgedCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6087C51B8CDBA800BBD43C /* SwiftlyBridgedCrypto.framework */; };
 		EF6087D51B8CDBA800BBD43C /* SwiftlyBridgedCryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6087D41B8CDBA800BBD43C /* SwiftlyBridgedCryptoTests.swift */; };
+		EF6087EA1B8E3ADD00BBD43C /* NSDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6087E91B8E3ADD00BBD43C /* NSDataExtension.swift */; };
+		EF6087EC1B8E3BE200BBD43C /* SHADelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6087EB1B8E3BE200BBD43C /* SHADelegate.swift */; };
+		EF6087EE1B8E420D00BBD43C /* CryptoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6087ED1B8E420D00BBD43C /* CryptoDelegate.swift */; };
+		EF6087F01B8E461100BBD43C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6087EF1B8E461100BBD43C /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		EF6087CF1B8CDBA800BBD43C /* SwiftlyBridgedCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftlyBridgedCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6087D41B8CDBA800BBD43C /* SwiftlyBridgedCryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftlyBridgedCryptoTests.swift; sourceTree = "<group>"; };
 		EF6087D61B8CDBA800BBD43C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF6087E91B8E3ADD00BBD43C /* NSDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataExtension.swift; sourceTree = "<group>"; };
+		EF6087EB1B8E3BE200BBD43C /* SHADelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHADelegate.swift; sourceTree = "<group>"; };
+		EF6087ED1B8E420D00BBD43C /* CryptoDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoDelegate.swift; sourceTree = "<group>"; };
+		EF6087EF1B8E461100BBD43C /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				EF6087C81B8CDBA800BBD43C /* SwiftlyBridgedCrypto.h */,
+				EF6087E91B8E3ADD00BBD43C /* NSDataExtension.swift */,
+				EF6087EF1B8E461100BBD43C /* StringExtension.swift */,
+				EF6087ED1B8E420D00BBD43C /* CryptoDelegate.swift */,
+				EF6087EB1B8E3BE200BBD43C /* SHADelegate.swift */,
 				EF6087CA1B8CDBA800BBD43C /* Info.plist */,
 			);
 			path = SwiftlyBridgedCrypto;
@@ -142,6 +154,7 @@
 		EF6087BC1B8CDBA800BBD43C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "James Carroll";
 				TargetAttributes = {
@@ -193,6 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6087F01B8E461100BBD43C /* StringExtension.swift in Sources */,
+				EF6087EE1B8E420D00BBD43C /* CryptoDelegate.swift in Sources */,
+				EF6087EC1B8E3BE200BBD43C /* SHADelegate.swift in Sources */,
+				EF6087EA1B8E3ADD00BBD43C /* NSDataExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +235,7 @@
 		EF6087D71B8CDBA800BBD43C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -238,6 +255,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -256,7 +274,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/CommonCrypto";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -266,7 +285,7 @@
 		EF6087D81B8CDBA800BBD43C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -286,6 +305,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -297,6 +317,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/CommonCrypto";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -307,6 +329,7 @@
 		EF6087DA1B8CDBA800BBD43C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -314,15 +337,21 @@
 				INFOPLIST_FILE = SwiftlyBridgedCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.jamescarroll.SwiftlyBridgedCrypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		EF6087DB1B8CDBA800BBD43C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -330,6 +359,10 @@
 				INFOPLIST_FILE = SwiftlyBridgedCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.jamescarroll.SwiftlyBridgedCrypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -375,6 +408,7 @@
 				EF6087DB1B8CDBA800BBD43C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF6087DC1B8CDBA800BBD43C /* Build configuration list for PBXNativeTarget "SwiftlyBridgedCryptoTests" */ = {
 			isa = XCConfigurationList;
@@ -383,6 +417,7 @@
 				EF6087DE1B8CDBA800BBD43C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
