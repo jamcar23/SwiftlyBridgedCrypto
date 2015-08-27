@@ -9,7 +9,7 @@
 import Foundation
 import CommonCrypto
 
-protocol SHADelegate: Crypto {
+public protocol SHADelegate: Crypto {
   func sha1() -> String
   func sha224() -> String
   func sha256() -> String 

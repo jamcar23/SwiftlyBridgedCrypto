@@ -13,23 +13,23 @@ import Foundation
 extension String: SHADelegate {
   // All methods return an empty string if string encoding failed
   
-  func sha1() -> String {
+  public func sha1() -> String {
     return self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)?.sha1() ?? ""
   }
   
-  func sha224() -> String {
+  public func sha224() -> String {
     return self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)?.sha224() ?? ""
   }
   
-  func sha256() -> String {
+  public func sha256() -> String {
     return self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)?.sha256() ?? ""
   }
   
-  func sha384() -> String {
+  public func sha384() -> String {
     return self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)?.sha384() ?? ""
   }
   
-  func sha512() -> String {
+  public func sha512() -> String {
     return self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)?.sha512() ?? ""
   }
   

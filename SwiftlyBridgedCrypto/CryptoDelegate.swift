@@ -10,14 +10,14 @@ import Foundation
 
 // Common protocol for code share across all crypto functionality
 
-protocol Crypto {
+public protocol Crypto {
   func hexToString(hex: [UInt8]) -> String
 }
 
 // MARK: - Default Implementation
 
 extension Crypto {
-  func hexToString(hex: [UInt8]) -> String {
+  public func hexToString(hex: [UInt8]) -> String {
     return hex.map({ String(format: "%02hhx", $0)}).joinWithSeparator("")
   }
 }

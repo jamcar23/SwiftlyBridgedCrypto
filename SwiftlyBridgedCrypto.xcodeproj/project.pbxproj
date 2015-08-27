@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF54C1DA1B8FA66C009FCE89 /* SBCExamples.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = SBCExamples.playground; path = Playground/SBCExamples.playground; sourceTree = "<group>"; };
 		EF6087C51B8CDBA800BBD43C /* SwiftlyBridgedCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftlyBridgedCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6087C81B8CDBA800BBD43C /* SwiftlyBridgedCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftlyBridgedCrypto.h; sourceTree = "<group>"; };
 		EF6087CA1B8CDBA800BBD43C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		EF6087BB1B8CDBA800BBD43C = {
 			isa = PBXGroup;
 			children = (
+				EF54C1DA1B8FA66C009FCE89 /* SBCExamples.playground */,
 				EF6087C71B8CDBA800BBD43C /* SwiftlyBridgedCrypto */,
 				EF6087D31B8CDBA800BBD43C /* SwiftlyBridgedCryptoTests */,
 				EF6087C61B8CDBA800BBD43C /* Products */,
