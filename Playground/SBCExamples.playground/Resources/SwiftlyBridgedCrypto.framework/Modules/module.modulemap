@@ -1,0 +1,10 @@
+framework module SwiftlyBridgedCrypto {
+  umbrella header "SwiftlyBridgedCrypto.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftlyBridgedCrypto.Swift {
+    header "SwiftlyBridgedCrypto-Swift.h"
+}
