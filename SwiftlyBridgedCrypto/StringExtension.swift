@@ -10,7 +10,7 @@ import Foundation
 
 // This file holds the extensions to String
 
-extension String: SHADelegate {
+extension String: SBCSHADelegate {
   // All methods return an empty string if string encoding failed
   
   public func sha1() -> String {

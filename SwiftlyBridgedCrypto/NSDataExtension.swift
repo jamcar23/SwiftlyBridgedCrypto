@@ -11,7 +11,7 @@ import CommonCrypto
 
 // This file holds the extension to NSData
 
-extension NSData: SHADelegate {
+extension NSData: SBCSHADelegate {
   public func sha1() -> String {
     var digest = [UInt8](count: Int(CC_SHA1_DIGEST_LENGTH), repeatedValue: 0)
     CC_SHA1(self.bytes, CC_LONG(self.length), &digest)
