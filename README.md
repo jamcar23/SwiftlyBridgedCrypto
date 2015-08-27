@@ -6,7 +6,7 @@ You will need to go into the CommonCrypto folder and edit the module.map for
 your specific Xcode path. Below is my working module.map for Xcode 7 beta 5 on 
 OS X 10.10.
 
-```swift
+```
 module CommonCrypto [system] {
 header "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/CommonCrypto/CommonCrypto.h"
 export *
@@ -14,15 +14,17 @@ export *
 ```
 
 Next, you will need to go into Xcode and edit it some build settings. Go the 
-framework build settings and set it to show all settings. Go to "Swift Compilier
-- Search Paths" and add the following: 
+framework build settings and set it to show all settings. Go to "Swift Compilier - Search Paths" and add the following: 
 
 ```
 ${SRCROOT}/CommonCrypto
 ```
 
 ![Xcode project all build settings](https://github.com/jamcar23/SwiftlyBridgedCrypto/blob/master/docs/screenshots/projectBuildSettings_All.png)
+Show all build settings.
+
 ![Swift Compiler - Search Paths settings](https://github.com/jamcar23/SwiftlyBridgedCrypto/blob/master/docs/screenshots/searchPathSettings.png)
+Set Swift compiler settings.
 
 ## License
 
