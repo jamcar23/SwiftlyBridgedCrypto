@@ -1,9 +1,14 @@
 # Swiftly Bridged Crypto
 
-## CommonCrypto 
+This framework provides a Swift wrapper for CommonCrypto and other C crypto functionality. 
+You will need to build this framework manually (for now; hopefully), start by linking CommonCrypto.
+
+## Building
+
+### CommonCrypto 
 
 You will need to go into the CommonCrypto folder and edit the module.map for 
-your specific Xcode path. Below is my working module.map for Xcode 7 beta 5 on 
+your specific Xcode path. Below is my working module.map for Xcode 7 beta 6 on 
 OS X 10.10.
 
 ```
@@ -13,8 +18,7 @@ export *
 }
 ```
 
-Next, you will need to go into Xcode and edit it some build settings. Go the 
-framework build settings and set it to show all settings. Go to "Swift Compilier - Search Paths" and add the following: 
+Next, you will need to go into Xcode and edit it some build settings. Go to the project build settings and set it to show all settings. Go to "Swift Compilier - Search Paths" and add the following: 
 
 ```
 ${SRCROOT}/CommonCrypto
