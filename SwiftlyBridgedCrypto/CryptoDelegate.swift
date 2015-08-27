@@ -18,6 +18,6 @@ protocol Crypto {
 
 extension Crypto {
   func hexToString(hex: [UInt8]) -> String {
-    return "".join(hex.map({ String(format: "%02hhx", $0)}))
+    return hex.map({ String(format: "%02hhx", $0)}).joinWithSeparator("")
   }
 }
