@@ -11,7 +11,7 @@ import Foundation
 // Common protocol for code share across all crypto functionality
 
 public protocol SBCrypto {
-  func bytesToHexString(hex: [UInt8]) -> String
+  func bytesToHexString(bytes: [UInt8]) -> String
 }
 
 // MARK: - Default Implementation
